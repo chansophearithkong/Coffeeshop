@@ -1,0 +1,35 @@
+BEAN & BLOOM COFFEE SHOP - FIXED PROJECT
+
+1. Extract this ZIP.
+2. Open the coffee-shop folder in VS Code.
+3. Open PowerShell in that folder.
+4. Run:
+   npm install
+   npm run dev
+
+If you previously had the Vite chunk.js error, run:
+   Remove-Item -Recurse -Force node_modules
+   Remove-Item -Force package-lock.json -ErrorAction SilentlyContinue
+   npm cache verify
+   npm install
+   npm run dev
+
+You can also run FIX_WINDOWS.ps1 from PowerShell.
+
+The project uses React 18.3.1 and Vite 6.3.5 for a stable setup.
+Firebase is optional for demo mode. To use real Firebase Authentication and Firestore,
+copy .env.example to .env and add your Firebase Web App values.
+
+QR PAYMENT CHECKOUT
+-------------------
+The checkout now includes the supplied ACLEDA QR code at:
+public/images/acleda-qr.png
+
+Flow:
+1. Add coffee products to the cart.
+2. Open the cart and click "Checkout & Pay".
+3. The checkout shows the order total and ACLEDA QR code.
+4. Scan the QR code with your banking app.
+5. Click "I have completed payment" to finish the demo checkout.
+
+Important: this demo does not automatically verify bank payments. It only displays the provided QR code and records the checkout as submitted in the UI.
